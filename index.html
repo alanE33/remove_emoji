@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>removeEmoji</title>
+    <meta name ="viewport" content ="width = device-width, initial-scale = 1.0">
     <script>
         function removeEmoji() {
             var inputUrl = document.getElementById("url-input").value;
@@ -12,9 +13,9 @@
         }
     </script>
 </head>
-<body>
+<body style = "width: 80%;">
     <h2>去除🔗中的emoji</h2>
-    <input style = "width: 300px;height: 20px;" type="text" id="url-input" placeholder="输入链接在这里">
+    <input style = "width: 100%;" type="text" id="url-input" placeholder="输入链接在这里">
     <button onclick="removeEmoji()">Remove Emoji</button>
     <p id="result"></p>
 </body>
