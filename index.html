@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>removeEmoji</title>
+    <script>
+        function removeEmoji() {
+            var inputUrl = document.getElementById("url-input").value;
+            var emojiRegex = /([\uD800-\uDBFF][\uDC00-\uDFFF])/g;
+            var outputUrl = inputUrl.replace(emojiRegex, '');
+            document.getElementById("result").textContent = outputUrl;
+        }
+    </script>
+</head>
+<body>
+    <h2>去除🔗中的emoji</h2>
+    <input style = "width: 300px;height: 20px;" type="text" id="url-input" placeholder="输入链接在这里">
+    <button onclick="removeEmoji()">Remove Emoji</button>
+    <p id="result"></p>
+</body>
+</html>
