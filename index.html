@@ -10,6 +10,8 @@
             var emojiRegex = /([\uD800-\uDBFF][\uDC00-\uDFFF])/g;
             var outputUrl = inputUrl.replace(emojiRegex, '');
             document.getElementById("result").textContent = outputUrl;
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = '<a href="' + outputUrl + '">' + outputUrl + '</a>';
         }
     </script>
 </head>
